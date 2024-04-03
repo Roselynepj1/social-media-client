@@ -1,4 +1,4 @@
-import { getPosts } from '../api/index.js'
+import { getPosts, isLoggedIn } from '../api/index.js'
 import { getProfiles } from '../api/profiles/read.js'
 import { load } from '../storage/load.js'
 import { save } from '../storage/save.js'
@@ -6,7 +6,6 @@ import { postLoaderTemplate } from '../templates/index.js'
 import { renderView } from '../ui/renderView.js'
 import * as views from '../views/index.js'
 import { getSearchParams } from './searchParams.js'
-import { isLoggedIn } from '../api/index.js'
 
 function authGuard(callback = () => {}, view = '') {
   if (isLoggedIn()) {

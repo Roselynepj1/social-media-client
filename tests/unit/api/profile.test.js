@@ -222,11 +222,9 @@ describe('updateProfileImage', () => {
     // Mock successful response
     fetch.mockResolvedValueOnce({
       ok: true,
-      json: jest
-        .fn()
-        .mockResolvedValueOnce({
-          message: 'Profile image updated successfully',
-        }),
+      json: jest.fn().mockResolvedValueOnce({
+        message: 'Profile image updated successfully',
+      }),
     })
     const name = 'profile1'
     const response = await updateProfileImage('exampleAvatar')

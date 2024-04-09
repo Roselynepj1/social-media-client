@@ -30,7 +30,7 @@
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
     "babel-jest": "^29.7.0",
-    "cypress": "^13.7.1",
+    "cypress": "^13.7.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",

@@ -10,7 +10,16 @@ jobs:
     steps:
       - name: Checkout under $GITHUB_WORKSPACE
         uses: actions/checkout@main
-
+        
+      - name: Write the cypress.env.json file
+        run: |
+          echo '{
+            "user-email": "'${{ secrets.USER_EMAIL }}'",
+            "user-password": "'${{ secrets.USER_PASSWORD }}'",
+            "wrong-user": "'${{ secrets.WRONG_USER }}'",
+            "wrong-password": "'${{ secrets.WRONG_PASSWORD }}'"
+          }' > cypress.env.json
+          
       - name: run cypress tests with electron
         uses: cypress-io/github-action@v4
         with:

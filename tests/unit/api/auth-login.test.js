@@ -68,7 +68,7 @@ describe('login function', () => {
     }
     global.fetch.mockResolvedValue(mockResponse)
 
-    await expect(login('mockEmail', 'mockPassword')).rejects.toThrow(
+    await expect(login('mockemail@noroff.no', 'mockPassword')).rejects.toThrow(
       'Unauthorized',
     )
   })
